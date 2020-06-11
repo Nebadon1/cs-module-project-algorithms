@@ -5,7 +5,16 @@ Returns: a List of integers
 def sliding_window_max(nums, k):
     # Your code here
 
-    pass
+    new_arr = []
+    for i in range(len(nums)-k+1):
+        largest = nums[i]
+        for j in range(i, i+k):
+            print(nums[j])
+            if nums[j]> largest:
+                largest = nums[j]
+        print('________')
+        new_arr.append(largest)
+    return new_arr
 
 
 if __name__ == '__main__':
@@ -14,3 +23,5 @@ if __name__ == '__main__':
     k = 3
 
     print(f"Output of sliding_window_max function is: {sliding_window_max(arr, k)}")
+
+    #wasn't able to do the large number will try later
